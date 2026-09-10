@@ -1,0 +1,19 @@
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+db.sqlite3
+staticfiles/
+.env
+
+# node
+node_modules/
+dist/
+.vite/
+*.local
+
+# editors / os
+.vscode/
+.idea/
+.DS_Store
