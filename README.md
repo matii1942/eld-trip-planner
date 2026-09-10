@@ -7,7 +7,12 @@ driver's 70-hour / 8-day cycle. The app routes the trip, inserts every rest,
 break, fuel stop and restart that 49 CFR Part 395 requires, plots it on a map,
 and draws a filled-in Driver's Daily Log for each day.
 
-**Live:** _add Vercel URL_ · **API:** _add Render URL_ · **Demo:** _add Loom_
+**Live app:** https://eld-trip-planner-livid-tau.vercel.app
+**API:** https://eld-trip-planner-api-90m1.onrender.com
+**Walkthrough:** _add Loom link_
+
+> The API runs on Render's free tier and sleeps after inactivity, so the first
+> request may take ~30 seconds. Everything after that is quick.
 
 ---
 
