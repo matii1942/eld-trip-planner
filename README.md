@@ -132,10 +132,15 @@ Returns `summary`, `route`, `stops`, `segments`, `days`, `violations` and
 ## Deploying
 
 **API → Render.** `render.yaml` is a blueprint: New → Blueprint → point at the
-repo. It provisions the web service and a free Postgres. Afterwards set
-`CORS_ALLOWED_ORIGINS` to your Vercel URL and `GEOCODER_USER_AGENT` to something
-with a real contact address. The free tier sleeps, so the first request after a
-quiet spell takes ~30 s.
+repo. Afterwards set `CORS_ALLOWED_ORIGINS` to your Vercel URL and
+`GEOCODER_USER_AGENT` to something with a real contact address. The free tier
+sleeps, so the first request after a quiet spell takes ~30 s.
+
+It runs on SQLite deliberately. Render's free Postgres expires after 30 days,
+and a trip plan is deterministic — the same inputs regenerate the same result —
+so persistence is a convenience for shareable `?trip=<id>` links, not something
+the app depends on. Switching to Postgres is one env var; `psycopg2-binary` is
+already in `requirements.txt`.
 
 **App → Vercel.** Import the repo, set Root Directory to `frontend`, and add
 `VITE_API_URL` pointing at the Render URL.
