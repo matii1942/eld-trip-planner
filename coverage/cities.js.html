@@ -1,0 +1,403 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for cities.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> cities.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>15/15</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>11/11</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>1/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>11/11</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">2247x</span>
+<span class="cline-any cline-yes">2247x</span>
+<span class="cline-any cline-yes">2234x</span>
+<span class="cline-any cline-yes">2247x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * Major US cities and freight hubs, used for instant local type-ahead.
+ *
+ * The reason this list exists rather than a network call per keystroke:
+ * Nominatim's usage policy forbids autocomplete outright ("strictly
+ * forbidden and will get you banned"), and Photon's public instance asks
+ * that request volume stay reasonable. Filtering a local list costs nothing,
+ * responds instantly, and keeps the geocoders for what they are good at --
+ * resolving the three locations once, when the trip is actually planned.
+ *
+ * Anything not on this list still works: the field accepts free text and the
+ * backend geocodes it at plan time.
+ */
+export const CITIES = [
+  "New York, NY", "Los Angeles, CA", "Chicago, IL", "Houston, TX",
+  "Phoenix, AZ", "Philadelphia, PA", "San Antonio, TX", "San Diego, CA",
+  "Dallas, TX", "San Jose, CA", "Austin, TX", "Jacksonville, FL",
+  "Fort Worth, TX", "Columbus, OH", "Charlotte, NC", "Indianapolis, IN",
+  "San Francisco, CA", "Seattle, WA", "Denver, CO", "Washington, DC",
+  "Boston, MA", "El Paso, TX", "Nashville, TN", "Oklahoma City, OK",
+  "Las Vegas, NV", "Detroit, MI", "Portland, OR", "Memphis, TN",
+  "Louisville, KY", "Milwaukee, WI", "Baltimore, MD", "Albuquerque, NM",
+  "Tucson, AZ", "Fresno, CA", "Sacramento, CA", "Mesa, AZ",
+  "Kansas City, MO", "Atlanta, GA", "Omaha, NE", "Colorado Springs, CO",
+  "Raleigh, NC", "Virginia Beach, VA", "Long Beach, CA", "Miami, FL",
+  "Oakland, CA", "Minneapolis, MN", "Tulsa, OK", "Bakersfield, CA",
+  "Wichita, KS", "Arlington, TX", "Aurora, CO", "Tampa, FL",
+  "New Orleans, LA", "Cleveland, OH", "Honolulu, HI", "Anaheim, CA",
+  "Lexington, KY", "Stockton, CA", "Corpus Christi, TX", "Henderson, NV",
+  "Riverside, CA", "Newark, NJ", "Saint Paul, MN", "Santa Ana, CA",
+  "Cincinnati, OH", "Irvine, CA", "Orlando, FL", "Pittsburgh, PA",
+  "St. Louis, MO", "Greensboro, NC", "Jersey City, NJ", "Anchorage, AK",
+  "Lincoln, NE", "Plano, TX", "Durham, NC", "Buffalo, NY",
+  "Chandler, AZ", "Chula Vista, CA", "Toledo, OH", "Madison, WI",
+  "Gilbert, AZ", "Reno, NV", "Fort Wayne, IN", "North Las Vegas, NV",
+  "St. Petersburg, FL", "Lubbock, TX", "Irving, TX", "Laredo, TX",
+  "Winston-Salem, NC", "Chesapeake, VA", "Glendale, AZ", "Scottsdale, AZ",
+  "Garland, TX", "Boise, ID", "Norfolk, VA", "Spokane, WA",
+  "Fremont, CA", "Richmond, VA", "Santa Clarita, CA", "San Bernardino, CA",
+  "Baton Rouge, LA", "Hialeah, FL", "Tacoma, WA", "Modesto, CA",
+  "Port St. Lucie, FL", "Huntsville, AL", "Des Moines, IA", "Moreno Valley, CA",
+  "Fontana, CA", "Frisco, TX", "Rochester, NY", "Yonkers, NY",
+  "Fayetteville, NC", "Worcester, MA", "Columbus, GA", "Cape Coral, FL",
+  "McKinney, TX", "Little Rock, AR", "Oxnard, CA", "Amarillo, TX",
+  "Augusta, GA", "Salt Lake City, UT", "Montgomery, AL", "Birmingham, AL",
+  "Grand Rapids, MI", "Grand Prairie, TX", "Overland Park, KS", "Tallahassee, FL",
+  "Huntington Beach, CA", "Sioux Falls, SD", "Peoria, AZ", "Knoxville, TN",
+  "Glendale, CA", "Vancouver, WA", "Providence, RI", "Akron, OH",
+  "Brownsville, TX", "Mobile, AL", "Newport News, VA", "Tempe, AZ",
+  "Shreveport, LA", "Chattanooga, TN", "Fort Lauderdale, FL", "Aurora, IL",
+  "Elk Grove, CA", "Ontario, CA", "Salem, OR", "Cary, NC",
+  "Santa Rosa, CA", "Rancho Cucamonga, CA", "Eugene, OR", "Oceanside, CA",
+  "Clarksville, TN", "Garden Grove, CA", "Lancaster, CA", "Springfield, MO",
+  "Pembroke Pines, FL", "Fort Collins, CO", "Palmdale, CA", "Salinas, CA",
+  "Hayward, CA", "Corona, CA", "Paterson, NJ", "Murfreesboro, TN",
+  "Macon, GA", "Lakewood, CO", "Killeen, TX", "Springfield, MA",
+  "Alexandria, VA", "Kansas City, KS", "Sunnyvale, CA", "Hollywood, FL",
+  "Roseville, CA", "Charleston, SC", "Escondido, CA", "Joliet, IL",
+  "Jackson, MS", "Bellevue, WA", "Surprise, AZ", "Naperville, IL",
+  "Pasadena, TX", "Pomona, CA", "Bridgeport, CT", "Denton, TX",
+  "Rockford, IL", "Mesquite, TX", "Savannah, GA", "Syracuse, NY",
+  "McAllen, TX", "Torrance, CA", "Olathe, KS", "Visalia, CA",
+  "Thornton, CO", "Fullerton, CA", "Gainesville, FL", "Waco, TX",
+  "West Valley City, UT", "Warren, MI", "Hampton, VA", "Dayton, OH",
+  "Columbia, SC", "Orange, CA", "Cedar Rapids, IA", "Stamford, CT",
+  "Victorville, CA", "Pasadena, CA", "Elizabeth, NJ", "New Haven, CT",
+  "Miramar, FL", "Kent, WA", "Sterling Heights, MI", "Carrollton, TX",
+  "Coral Springs, FL", "Midland, TX", "Norman, OK", "Athens, GA",
+  "Santa Clara, CA", "Columbia, MO", "Fargo, ND", "Pearland, TX",
+  "Simi Valley, CA", "Topeka, KS", "Meridian, ID", "Allentown, PA",
+  "Thousand Oaks, CA", "Abilene, TX", "Vallejo, CA", "Concord, CA",
+  "Round Rock, TX", "Arvada, CO", "Clovis, CA", "Palm Bay, FL",
+  "Independence, MO", "Lafayette, LA", "Ann Arbor, MI", "Rochester, MN",
+  "Hartford, CT", "College Station, TX", "Fairfield, CA", "Wilmington, NC",
+  "North Charleston, SC", "Billings, MT", "West Palm Beach, FL", "Berkeley, CA",
+  "Cambridge, MA", "Clearwater, FL", "West Jordan, UT", "Evansville, IN",
+  "Richardson, TX", "Broken Arrow, OK", "Richmond, CA", "League City, TX",
+  "Manchester, NH", "Lakeland, FL", "Carlsbad, CA", "Antioch, CA",
+  "Westminster, CO", "High Point, NC", "Provo, UT", "Lowell, MA",
+  "Elgin, IL", "Waterbury, CT", "Springfield, IL", "Gresham, OR",
+  "Murrieta, CA", "Lewisville, TX", "Las Cruces, NM", "Lansing, MI",
+  "Beaumont, TX", "Odessa, TX", "Pueblo, CO", "Peoria, IL",
+  "Downey, CA", "Pompano Beach, FL", "Miami Gardens, FL", "Temecula, CA",
+  "Everett, WA", "Costa Mesa, CA", "San Buenaventura, CA", "Sparks, NV",
+  "Santa Maria, CA", "Sugar Land, TX", "Greeley, CO", "South Fulton, GA",
+  "Dearborn, MI", "Concord, NC", "Tyler, TX", "Sandy Springs, GA",
+  "West Covina, CA", "Green Bay, WI", "Centennial, CO", "Jurupa Valley, CA",
+  "El Monte, CA", "Allen, TX", "Hillsboro, OR", "Menifee, CA",
+  "Nampa, ID", "Spokane Valley, WA", "Rio Rancho, NM", "Brockton, MA",
+];
+&nbsp;
+/** Case-insensitive prefix-then-substring match, best matches first. */
+export function searchCities(query, limit = 6) {
+  const q = (query || "").trim().toLowerCase();
+  if (q.length &lt; 2) return [];
+&nbsp;
+  const starts = [];
+  const contains = [];
+  for (const city of CITIES) {
+    const lower = city.toLowerCase();
+    if (lower.startsWith(q)) starts.push(city);
+    else if (lower.includes(q)) contains.push(city);
+    if (starts.length &gt;= limit) break;
+  }
+  return [...starts, ...contains].slice(0, limit);
+}
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2026-09-18T16:46:23.965Z
+            </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    
